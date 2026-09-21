@@ -55,19 +55,19 @@ python recon.py --batch programs/ -u your_handle --passive-only -o reports/
 python recon.py --batch programs/ -u your_handle -o reports/ --threads 5 --rate 5
 ```
 
-Аргументы
-Флаг	Описание
--p PATH	один файл правил
---batch DIR	папка с файлами правил
--u HANDLE	ник на платформе (для заголовка X-Bug-Bounty)
---rate N	макс. запросов в секунду (дефолт 5)
--o DIR	директория для отчётов
---proxy URL	HTTP(S)-прокси (например, для Burp)
---passive-only	только пассивные модули
---threads N	рабочие потоки (дефолт 5)
---wordlist PATH	свой словарь субдоменов
---max-subdomains	ограничение на количество субдоменов
---max-active-targets	ограничение на цели для активных модулей
+| Флаг | Аргумент | Описание |
+|------|----------|----------|
+| `-p` | `PATH` | один файл правил |
+| `--batch` | `DIR` | папка с файлами правил |
+| `-u` | `HANDLE` | ник на платформе (для заголовка `X-Bug-Bounty`) |
+| `--rate` | `N` | макс. запросов в секунду (дефолт 5) |
+| `-o` | `DIR` | директория для отчётов |
+| `--proxy` | `URL` | HTTP(S)-прокси (например, для Burp) |
+| `--threads` | `N` | рабочие потоки (дефолт 5) |
+| `--wordlist` | `PATH` | свой словарь субдоменов |
+| `--max-subdomains` | — | ограничение на количество субдоменов |
+| `--max-active-targets` | — | ограничение на цели для активных модулей |
+
 Формат отчёта
 
 reports/<program_name>_report.json — единственный артефакт:
