@@ -33,23 +33,27 @@
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
 
 Использование
 
 Одна программа:
-bash
 
+```bash
 python recon.py -p programs/hackerone_example.md -u your_handle
+```
 
 Батч по папке (для запуска на ночь):
-bash
 
+```bash
 python recon.py --batch programs/ -u your_handle --passive-only -o reports/
+```
 
 Или с активными модулями:
-bash
 
+```bash
 python recon.py --batch programs/ -u your_handle -o reports/ --threads 5 --rate 5
+```
 
 Аргументы
 Флаг	Описание
@@ -67,8 +71,8 @@ python recon.py --batch programs/ -u your_handle -o reports/ --threads 5 --rate 
 Формат отчёта
 
 reports/<program_name>_report.json — единственный артефакт:
-json
 
+```json
 {
   "program": "example_program",
   "generated_at": "2026-08-15T...",
@@ -81,6 +85,7 @@ json
     ...
   }
 }
+```
 
 Этика
 
