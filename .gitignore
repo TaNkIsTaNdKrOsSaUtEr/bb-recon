@@ -1,0 +1,48 @@
+# --- Результаты сканов (НИКОГДА не коммитим) ---
+reports/
+*.log
+stdout.log
+nohup.out
+
+# --- Правила программ bug bounty: содержат домены реальных компаний,
+#     rate-limit'ы, платформенные заметки. В паблик не идут. ---
+programs/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Виртуальные окружения ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Редакторы / ОС ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Локальные секреты и конфиги ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.yaml
+
+# --- Личные заметки ---
+notes/
+TODO.local.md
